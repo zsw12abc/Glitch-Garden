@@ -395,12 +395,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3761330f4e39484cb9363634aee08c6, type: 3}
---- !u!20 &1264651360 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7311033325875815567, guid: e4382e0ac01e4c1459fb4032b2c0ce7f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7311033327634381230}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1274011648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,31 +718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991779433198496973, guid: 2f4dd1c6e11aaa74ebf818729b0043f8,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.006251953
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991779433198496973, guid: 2f4dd1c6e11aaa74ebf818729b0043f8,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.006251953
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991779433198496973, guid: 2f4dd1c6e11aaa74ebf818729b0043f8,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6991779433198496972, guid: 2f4dd1c6e11aaa74ebf818729b0043f8,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1264651360}
-    - target: {fileID: 6991779433198496972, guid: 2f4dd1c6e11aaa74ebf818729b0043f8,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4dd1c6e11aaa74ebf818729b0043f8, type: 3}
