@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641086179211655765}
   - component: {fileID: 1641086179211655764}
+  - component: {fileID: 7116233359836925633}
   m_Layer: 0
   m_Name: Zucchini
   m_TagString: Untagged
@@ -79,3 +80,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7116233359836925633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641086179211655767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: c6053de64012cba429545d00159fd9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
