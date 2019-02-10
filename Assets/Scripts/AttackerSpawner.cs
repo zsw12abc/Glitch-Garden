@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AttackerSpawner : MonoBehaviour
@@ -22,7 +23,8 @@ public class AttackerSpawner : MonoBehaviour
 
     private void SpawnAttacker()
     {
-        Instantiate(attackerPrefab, transform.position, transform.rotation);
+        var newAttacker = Instantiate(attackerPrefab, transform.position, transform.rotation) as Attacker;
+        newAttacker.transform.parent = transform;
     }
 
     // Update is called once per frame
