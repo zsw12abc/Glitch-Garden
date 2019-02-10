@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c4b3fe5-bd42-4542-99d3-5e132202a479" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,12 +104,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding>
-                <marker date="1549761117426" expanded="false" signature="6:78" ph="..." />
-                <marker date="1549761117426" expanded="true" signature="124:171" ph="{...}" />
-                <marker date="1549761117426" expanded="true" signature="157:169" ph="{...}" />
+                <marker date="1549761445935" expanded="false" signature="6:78" ph="..." />
+                <marker date="1549761445935" expanded="true" signature="124:609" ph="{...}" />
+                <marker date="1549761445935" expanded="true" signature="208:245" ph="{...}" />
+                <marker date="1549761445935" expanded="true" signature="285:471" ph="{...}" />
+                <marker date="1549761445935" expanded="true" signature="505:607" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -256,12 +258,12 @@
       <workItem from="1549535254738" duration="1080000" />
       <workItem from="1549678913159" duration="2556000" />
       <workItem from="1549751123524" duration="597000" />
-      <workItem from="1549760206886" duration="942000" />
+      <workItem from="1549760206886" duration="1243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7236000" />
+    <option name="totallyTimeSpent" value="7537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,12 +467,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DefenderSpawner.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
-            <marker date="1549761117426" expanded="false" signature="6:78" ph="..." />
-            <marker date="1549761117426" expanded="true" signature="124:171" ph="{...}" />
-            <marker date="1549761117426" expanded="true" signature="157:169" ph="{...}" />
+            <marker date="1549761445935" expanded="false" signature="6:78" ph="..." />
+            <marker date="1549761445935" expanded="true" signature="124:609" ph="{...}" />
+            <marker date="1549761445935" expanded="true" signature="208:245" ph="{...}" />
+            <marker date="1549761445935" expanded="true" signature="285:471" ph="{...}" />
+            <marker date="1549761445935" expanded="true" signature="505:607" ph="{...}" />
           </folding>
         </state>
       </provider>
