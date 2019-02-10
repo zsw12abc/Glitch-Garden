@@ -8,18 +8,26 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquareClicked());
+        SpawnDefender(SnapToGrid(GetSquareClicked()));
     }
 
-    private Vector2 GetSquareClicked()
+    private static Vector2 GetSquareClicked()
     {
         var clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         var worldPost = Camera.main.ScreenToWorldPoint(clickPos);
         return worldPost;
     }
 
-    private void SpawnDefender(Vector2 worldPost)
+    private static Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        var newDefender = Instantiate(defender, worldPost, Quaternion.identity);
+        float newX = Mathf.RoundToInt(rawWorldPos.x);
+        float newY = Mathf.RoundToInt(rawWorldPos.y);
+
+        return new Vector2(newX, newY);
+    }
+
+    private void SpawnDefender(Vector2 roundedPos)
+    {
+        var newDefender = Instantiate(defender, roundedPos, Quaternion.identity);
     }
 }
