@@ -40,7 +40,7 @@ namespace WakaTime {
         _debug = EditorPrefs.GetBool(DEBUG_PREF);
 
       if (!_enabled) {
-        if (_debug) Debug.Log("<WakaTime> Explicitly disabled, skipping initialization...");
+//        if (_debug) Debug.Log("<WakaTime> Explicitly disabled, skipping initialization...");
         return;
       }
 
@@ -53,7 +53,7 @@ namespace WakaTime {
         return;
       }
 
-      if (_debug) Debug.Log("<WakaTime> Initializing...");
+//      if (_debug) Debug.Log("<WakaTime> Initializing...");
 
       SendHeartbeat();
       LinkCallbacks();
@@ -96,14 +96,14 @@ namespace WakaTime {
     }
 
     static void SendHeartbeat(bool fromSave = false) {
-      if (_debug) Debug.Log("<WakaTime> Sending heartbeat...");
+//      if (_debug) Debug.Log("<WakaTime> Sending heartbeat...");
 
       var currentScene = EditorSceneManager.GetActiveScene().path;
       var file = currentScene != string.Empty ? Path.Combine(Application.dataPath, currentScene.Substring("Assets/".Length)) : string.Empty;
 
       var heartbeat = new Heartbeat(file, fromSave);
       if ((heartbeat.time - _lastHeartbeat.time < HEARTBEAT_COOLDOWN) && !fromSave && (heartbeat.entity == _lastHeartbeat.entity)) {
-        if (_debug) Debug.Log("<WakaTime> Skip this heartbeat");
+//        if (_debug) Debug.Log("<WakaTime> Skip this heartbeat");
         return;
       }
 
@@ -120,7 +120,7 @@ namespace WakaTime {
           return;
         }
 
-        if (_debug) Debug.Log("<WakaTime> Got response\n" + request.downloadHandler.text);
+//        if (_debug) Debug.Log("<WakaTime> Got response\n" + request.downloadHandler.text);
         var response = JsonUtility.FromJson<Response<HeartbeatResponse>>(request.downloadHandler.text);
 
         if (response.error != null) {
@@ -130,7 +130,7 @@ namespace WakaTime {
             Debug.LogError("<WakaTime> Failed to send heartbeat to WakaTime!\n" + response.error);
           }
         } else {
-          if (_debug) Debug.Log("<WakaTime> Sent heartbeat!");
+//          if (_debug) Debug.Log("<WakaTime> Sent heartbeat!");
           _lastHeartbeat = response.data;
         }
       };
