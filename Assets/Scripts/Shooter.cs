@@ -1,32 +1,26 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
     [SerializeField] private GameObject projectile, gun;
     private AttackerSpawner _myLaneSpawner;
+    private Animator _animator;
 
 
     private void Start()
     {
         SetLaneSpawner();
+        _animator = GetComponent<Animator>();
     }
 
 
     private void Update()
     {
-        if (IsAttackerInLane())
-        {
-            //TODO change animation state to shooting
-            Debug.Log("Shooting");
-        }
-        else
-        {
-            //TODO change animation state to idle
-            Debug.Log("IDLE");
-        }
+        _animator.SetBool("IsAttacking", IsAttackerInLane());
     }
 
     private void SetLaneSpawner()
