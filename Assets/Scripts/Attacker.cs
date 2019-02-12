@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)] private float _currentSpeed = 1f;
+    private GameObject _currentTarget;
 
     // Update is called once per frame
     void Update()
@@ -15,5 +17,11 @@ public class Attacker : MonoBehaviour
     public void SetMovementSpeed(float speed)
     {
         _currentSpeed = speed;
+    }
+
+    public void Attack(GameObject target)
+    {
+        GetComponent<Animator>().SetBool("IsAttacking", true);
+        _currentTarget = target;
     }
 }
