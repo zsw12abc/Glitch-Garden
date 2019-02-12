@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Lizard : MonoBehaviour
@@ -13,4 +14,5 @@ public class Lizard : MonoBehaviour
             GetComponent<Attacker>().Attack(otherObject);
         }
     }
+
 }
