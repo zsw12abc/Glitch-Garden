@@ -8,17 +8,22 @@ public class AttackerSpawner : MonoBehaviour
     [SerializeField] private float minSpawnDelay = 1f;
     [SerializeField] private float maxSpawnDelay = 5f;
     [SerializeField] private Attacker[] attackerPrefabArray;
-    private bool spawn = true;
+    private bool _spawn = true;
 
 
     // Start is called before the first frame update
     private IEnumerator Start()
     {
-        while (spawn)
+        while (_spawn)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
             SpawnAttacker();
         }
+    }
+
+    public void StopSpawning()
+    {
+        _spawn = false;
     }
 
     private void SpawnAttacker()
