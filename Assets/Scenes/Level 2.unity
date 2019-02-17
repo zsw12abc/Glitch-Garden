@@ -1112,11 +1112,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4285736656320648012, guid: 5c2ff4bac7536144ca9848164b2c9092,
-        type: 3}
-      propertyPath: levelTime
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4285736656153436179, guid: 5c2ff4bac7536144ca9848164b2c9092,
         type: 3}
       propertyPath: m_AnchorMin.x
