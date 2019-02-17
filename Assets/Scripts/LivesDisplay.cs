@@ -6,29 +6,33 @@ using UnityEngine.UI;
 
 public class LivesDisplay : MonoBehaviour
 {
-    [SerializeField] private int lives = 10;
+    [SerializeField] private float baseLives = 3f;
     [SerializeField] private int damage = 1;
+    private float _lives = 10f;
     private Text _livesText;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        _lives = baseLives - PlayerPrefsController.GetDifficulty();
+        Debug.Log("Level is " + PlayerPrefsController.GetDifficulty());
+        Debug.Log("Current lives is " + _lives);
         _livesText = GetComponent<Text>();
         UpdateDisplay();
     }
 
     private void UpdateDisplay()
     {
-        _livesText.text = lives.ToString();
+        _livesText.text = _lives.ToString();
     }
 
     public void TakeLife()
     {
-        lives -= damage;
+        _lives -= damage;
         UpdateDisplay();
 
-        if (lives <= 0)
+        if (_lives <= 0)
         {
             FindObjectOfType<LevelController>().HandleLoseCondition();
         }
